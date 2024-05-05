@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxu.az - {{ news.name }}</title>
+    <link rel="stylesheet" href="news_details.css">
+    <link rel="icon" href="{% static 'images/unnamed.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="news-details">
+            <h1 class="news-title">{{ news.name}}</h1>
+            <p class="news-date">{{ news.upload_time }}</p>
+            <img src="{{ news.image }}" alt="news.id" class="news-image">
+            <p class="news-content">
+            {{news.text}} 
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@font-face {
+    font-family: MuseoCyrillic;
+    src: url("../fonts/Museo700-Regular.ttf");
+}
+
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-row {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    max-width: 960px; /* Adjust max-width as needed */
+    width: 100%;
+}
+
+.news-card {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.1s; /* Add a smooth transition for the shadow effect */
+
+}
+
+.news-card:hover {
+    box-shadow: 0 0 5px rgba(82, 82, 82, 0.5); /* Add shadow effect on hover */
+}
+
+.news-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-details {
+    padding: 20px;
+}
+
+.news-title {
+    color: rgb(19,49,148);
+    font-size: 21px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.news-timestamp {
+    font-size: 15px;
+    color: #777;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo-div{
+    background-color: rgb(10,42,77);
+    margin-top: 110px;
+
+}
+
+.main-logo{
+    font-size: 40px;
+    color: #fff;
+    font-family: MuseoCyrillic;
+    margin-left: 26%;
+    margin-bottom: 0px;
+}
+
+.sub-menu{
+    background-color: rgb(34,34,34);
+    width: 100%;
+    height: 46px;
+    margin-bottom: 25px;
+
+}
+
+#sub-menus1{
+    color: #fff;
+    margin-top: 0px;
+    margin-left: 26%;
+    padding: 0.5%;
+}
+
+
+#sub-menus2{
+    color: #fff;
+    margin-top: 0px;
+    margin-left: 29%;
+    padding: 0.5%;
+}
+
+
+#sub-menus3{
+    color: #fff;
+    margin-top: 0px;
+    margin-left: 26%;
+    padding: 0.5%;
+}
+
+
+/* Counters container */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Like, Dislike, Views counters */
+  .stats_likes {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stats_likes {
+    margin-right: 5px;
+  }
+  
+  .counter-text {
+    font-size: 14px;
+  }
+  
+  /* Styling specific to each counter */
+  .stats_likes {
+    color: green;
+  }
+  
+  .dislike-counter {
+    color: red;
+  }
+  
+  .views-counter {
+    color: blue;
+  }
+/* Adjust styles as needed */

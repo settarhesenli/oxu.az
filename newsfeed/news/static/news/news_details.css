@@ -1,0 +1,34 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-details {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    max-width: 612px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.news-content {
+    font-size: 16px;
+    line-height: 1.5;
+}

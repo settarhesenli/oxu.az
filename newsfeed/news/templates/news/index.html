@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxu.az - Azərbaycan və dünya xəbərləri</title>
+    <link rel="stylesheet" href="{% static 'news/style.css' %}">
+    <link rel="icon" href="{% static 'images/unnamed.png' %}">
+
+</head>
+<body>
+    <div class="logo-div">
+    <h1 class="main-logo">oxu.az</h1>
+    </div>
+    <div class="sub-menu">
+        <h2 id="sub-menus1">Baş Səhifə</h2>
+    </div>
+    {% for nw in news %}
+        <a href="news/{{ nw.pk }}">
+            <div class="news-container">  
+                    {% if forloop.counter0|divisibleby:3 %}
+                        <div class="news-row">
+                    {% endif %}
+                    <div class="news-card">
+                        <img src="{{ nw.image }}" alt="{{ nw.name }}">
+                        <div class="news-details">
+                            <h2 class="news-title">{{ nw.name }}</h2>
+                            <p class="news-timestamp">{{ nw.upload_time }}</p>
+                        </div>
+                        <div class="stats">
+                            <div class="stats_likes" data-id="868016" data-value="1" data-action="/868016/like"><span class="stats-i">0</span></div>
+                            <div class="stats-i-container stats-like-active stats_dislikes" data-id="868016" data-value="0" data-action="/868016/dislike"><span class="stats-i">1</span></div>
+                            <div class="stats-i-container stats_views"><span class="stats-i">29</span></div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 or forloop.last %}
+                        </div>
+                    {% endif %}
+            </div>
+        </a>
+    {% endfor %}
+</body>
+</html>
