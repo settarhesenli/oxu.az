@@ -65,9 +65,11 @@ a {
 }
 
 .logo-div{
-    background-color: rgb(10,42,77);
-    margin-top: 110px;
-
+    width: 100%;
+    height: 45px;
+    background-color: rgb(0, 25, 60);
+    background-image: url('../images/header_bg-16b933a63f94b28290d368006e6a4901530e656b79339c9ed6de9321eb73a30a.webp');
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 3px 0px;
 }
 
 .main-logo{
