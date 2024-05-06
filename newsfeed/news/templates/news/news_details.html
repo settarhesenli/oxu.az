@@ -6,19 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxu.az - {{ news.name }}</title>
-    <link rel="stylesheet" href="news_details.css">
-    <link rel="icon" href="{% static 'images/unnamed.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'news/details.css' %}">
+    <link rel="icon" href="{% static 'images/unnamed.png' %}">
 </head>
 <body>
     <div class="container">
-        <div class="news-details">
-            <h1 class="news-title">{{ news.name}}</h1>
-            <p class="news-date">{{ news.upload_time }}</p>
-            <img src="{{ news.image }}" alt="news.id" class="news-image">
-            <p class="news-content">
-            {{news.text}} 
-            </p>
+        <h1>{{ news.name }}</h1>
+        <div class="author">Redaktor: {{ news.autor }}</div>
+        <div class="date">Yayımlandı: {{ news.created_at}}</div>
+        <div class="date">Redaktə olundu: {{ news.updated_at}}</div>
+        <div class="image-container">
+            <img src="{{news.image}}" alt="News Image">
         </div>
+        <p>{{ news.text }}</p>    
+        <p>Like: {{ news.like_counter }}</p>
+        <p>Dislike: {{ news.dislike_counter }}</p>
+        <p>Baxış: {{ news.view_counter }}</p>
     </div>
 </body>
 </html>

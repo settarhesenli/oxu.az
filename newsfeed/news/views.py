@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseForbidden
 from .models import News
 
 
@@ -14,8 +15,12 @@ def home_page_view(request):
 
 def news_detail_view(request, pk):
     news = News.objects.get(id=pk)
+    news.view_counter += 1
+    news.save()
     context = {
         "news" : news
     }
     return render(request, "news/news_details.html", context)
+    
+    
     
